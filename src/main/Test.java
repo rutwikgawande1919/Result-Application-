@@ -1,5 +1,6 @@
 package main;
 
+import java.sql.SQLSyntaxErrorException;
 import java.util.Scanner;
 
 
@@ -78,17 +79,8 @@ public class Test {
 		break;
 	}
 	default:
+		System.err.println("Please enter a proper name");
 	}
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
 	   
 	 
 }
