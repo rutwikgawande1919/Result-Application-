@@ -1,87 +1,55 @@
 package main;
 
-import java.sql.SQLSyntaxErrorException;
 import java.util.Scanner;
 
-
-import entity.Student;
-import helper.OutputHelper;
-import repository.Studentrepository;
+import Service.StudentService;
 
 public class Test {
-   public static void main(String[] args) {
-	   //scanner class
-	   Scanner sc = new Scanner(System.in);
-	   System.out.println("Enter Student name");
-	   String name = sc.next();
-	   
-	   //required object
-	   Studentrepository repository = new Studentrepository();
-	   OutputHelper helper = new OutputHelper();
-	    
-	   //switch case
-	   switch (name) {
-	case "Ram": {
-		//get student object
-		Student Ram = repository.getRamObject();
-		// print student object
-		helper.printStudentDetails(Ram);
-		break;
+	public static void main(String[] args) {
+		// Scanner
+		
+		Scanner sc = new Scanner(System.in);
+
+		while (true) {
+			System.out.println("***Welcome to the resultapplication***");
+			System.out.println("Please select option of your choice");
+			System.out.println("1: Get students details by name");
+			System.out.println("2: Get all student details");
+			System.out.println("3: Get Student details by id");
+
+			System.out.println("Enter your option numbers only");
+			int value = sc.nextInt();
+			StudentService service = new StudentService();
+          
+			switch (value) {
+
+			case 1: {
+				System.out.println("Enter name of Student");
+				String name = sc.next();
+				// value 1 ->option 1:
+				// option 1: get student Details by name
+				service.getStudentDetails(name);
+			
+				break;
+			}
+			case 2: {
+				// value 2 ->option 2:
+				// option 2:get All student Details
+				service.getAllStudentDetails();
+
+				break;
+			}
+			case 3:{
+				System.out.println("Enter id of student");
+				int id =sc.nextInt();
+				service.getStudentDetails(id);
+				
+				break;
+			}
+			default:
+				System.err.println("Unexpected value: " + value);
+			}
+
+		}
 	}
-	case "Sham":{
-		Student Sham = repository.getShamObject();
-		helper.printStudentDetails(Sham);
-		break;
-	}
-	case"Vithoba":{
-		Student Vithoba = repository.getVithobaObject();
-		helper.printStudentDetails(Vithoba);
-		break;
-	}
-	case "Om":{
-		Student Om = repository.getOmObject();
-		helper.printStudentDetails(Om);
-		break;
-	}
-	case "Atharv":{
-		Student Atharv = repository.getAtharvObject();
-		helper.printStudentDetails(Atharv);
-		break;
-	}
-	case"Vinod":{
-		Student Vinod = repository.getVinodObject();
-		helper.printStudentDetails(Vinod);
-		break;
-	}
-	case"Shiv":{
-		Student Shiv = repository.getShivObject();
-		helper.printStudentDetails(Shiv);
-		break;
-	}
-	case "Rutu":{
-		Student Rutu =repository.getRutuObject();
-		helper.printStudentDetails(Rutu);
-		break;
-	}
-	case"Pranav":{
-		Student Pranav = repository.getPranavObject();
-		helper.printStudentDetails(Pranav);
-		break;
-	}
-	case "Ravi":{
-		Student Ravi = repository.getRaviObject();
-		helper.printStudentDetails(Ravi);
-		break;
-	}
-	case "Rahul":{
-		Student Rahul = repository.getRahulObject();
-		helper.printStudentDetails(Rahul);
-		break;
-	}
-	default:
-		System.err.println("Please enter a proper name");
-	}
-	   
-	 
-}
 }

@@ -4,13 +4,15 @@ import entity.Student;
 
 public class OutputHelper {
 
-	public void printStudentDetails(Student s) {
+	public static void printStudentDetails(Student s) {
 		
-		System.out.println("id :" + s.id);
-		System.out.println("name :" + s.firstname);
-		System.out.println("Lastname :" + s.lastname);
-		System.out.println("English marks :" + s.englishobtained);
-		System.out.println("math marks :" + s.mathobtained);
-		System.out.println("science marks :" + s.scienceobtained);
+		System.out.println("id :" + s.getId());
+		System.out.println("name :" + s.getFirstname());
+		System.out.println("Lastname :" + s.getLastname());
+		System.out.println("math marks :" + s.getMathobtained());
+		System.out.println("science marks :" + s.getScienceobtained());
+		System.out.println("English marks :" + s.getEnglishobtained());
+	    System.out.println("Standard :" +Student.standard);
+	    System.out.println("=================================");
 	}
 }

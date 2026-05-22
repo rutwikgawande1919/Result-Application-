@@ -3,125 +3,98 @@ package repository;
 import entity.Student;
 
 public class Studentrepository {
-	public Student getRamObject() {
+	
+	public static Student[] getAllStudent() {
+		
 		Student s = new Student();
-		s.id = 101;
-		s.firstname = "Ram";
-		s.lastname = "Patil";
-		s.englishobtained = 78;
-		s.mathobtained = 95;
-		s.scienceobtained = 78;
-		return s;
-	}
-
-	public Student getShamObject() {
+		s.setId(101);
+		s.setFirstname("Ram");
+		s.setLastname("Patil");
+		s.setMathobtained(95);
+		s.setScienceobtained(78);
+		s.setEnglishobtained(78);
+		
 		Student s1 = new Student();
-		s1.id = 102;
-		s1.firstname = "Sham";
-		s1.lastname = "Patil";
-		s1.englishobtained = 89;
-		s1.mathobtained = 79;
-		s1.scienceobtained = 95;
-		return s1;
-	}
-
-	public Student getVithobaObject() {
+		s1.setId(102);
+		s1.setFirstname("Sham");
+		s1.setLastname("Patil");
+		s1.setMathobtained(79);
+		s1.setScienceobtained(95);
+		s1.setEnglishobtained(89);
+		
 		Student s2 = new Student();
-		s2.id = 103;
-		s2.firstname = "Vithoba";
-		s2.lastname = "Maharaj";
-		s2.englishobtained = 68;
-		s2.mathobtained = 97;
-		s2.scienceobtained = 89;
-		return s2;
-	}
-
-	public Student getOmObject() {
+		s2.setId(103);
+		s2.setFirstname("Vithoba");
+		s2.setLastname("Maharaj");
+		s2.setMathobtained(97);
+		s2.setScienceobtained(89); 
+		s2.setEnglishobtained(68);
+		
 		Student s3 = new Student();
-		s3.id = 104;
-		s3.firstname = "Om";
-		s3.lastname = "Patil";
-		s3.englishobtained = 87;
-		s3.mathobtained = 96;
-		s3.scienceobtained = 89;
-		return s3;
-	}
-
-	public Student getAtharvObject() {
+		s3.setId(104);
+		s3.setFirstname("Om");
+		s3.setLastname("Patil");
+		s3.setMathobtained(96);
+		s3.setScienceobtained(89);
+		s3.setEnglishobtained(87);
+		
 		Student s4 = new Student();
-		s4.id = 105;
-		s4.firstname = "Atharv";
-		s4.lastname = "Patil";
-		s4.englishobtained = 99;
-		s4.mathobtained = 80;
-		s4.scienceobtained = 79;
-		return s4;
-	}
-
-	public Student getVinodObject() {
+		s4.setId(105);
+		s4.setFirstname("Atharv");
+		s4.setLastname("Patil");
+		s4.setMathobtained(75);
+		s4.setScienceobtained(59);
+		s4.setEnglishobtained(70);
+		
 		Student s5 = new Student();
-		s5.id = 106;
-		s5.firstname = "Vinod";
-		s5.lastname = "Nikole";
-		s5.englishobtained = 78;
-		s5.mathobtained = 87;
-		s5.scienceobtained = 90;
-		return s5;
-	}
-
-	public Student getShivObject() {
+		s5.setId(106);
+		s5.setFirstname("Vinod");
+		s5.setLastname("Nikole");
+		s5.setMathobtained(87);
+		s5.setScienceobtained(90);
+		s5.setEnglishobtained(78);
+		
+		
 		Student s6 = new Student();
-		s6.id = 107;
-		s6.firstname = "Shiv";
-		s6.lastname = "GAwande";
-		s6.englishobtained = 69;
-		s6.mathobtained = 59;
-		s6.scienceobtained = 89;
-		return s6;
-	}
-
-	public Student getRutuObject() {
+		s6.setId(107);
+		s6.setFirstname("Shiva");
+		s6.setLastname("Bunde");
+		s6.setMathobtained(59);
+		s6.setScienceobtained(89);
+		s6.setEnglishobtained(69);
+		
 		Student s7 = new Student();
-		s7.id = 108;
-		s7.firstname = "Rutu";
-		s7.lastname = "Gawande";
-		s7.englishobtained = 89;
-		s7.mathobtained = 79;
-		s7.scienceobtained = 87;
-		return s7;
-	}
-
-	public Student getPranavObject() {
+		s7.setId(108);
+		s7.setFirstname("Rutu");
+		s7.setLastname("Gawande");
+		s7.setMathobtained(79);
+		s7.setScienceobtained(87);
+		s7.setEnglishobtained(89);
+		
 		Student s8 = new Student();
-		s8.id = 109;
-		s8.firstname = "Pranav";
-		s8.lastname = "Gawande";
-		s8.englishobtained = 90;
-		s8.mathobtained = 89;
-		s8.scienceobtained = 79;
-		return s8;
-	}
-
-	public Student getRaviObject() {
+		s8.setId(109);
+		s8.setFirstname("Pranav");
+		s8.setLastname("Gawande");
+		s8.setMathobtained(89);
+		s8.setScienceobtained(79);
+		s8.setEnglishobtained(90);
+		
 		Student s9 = new Student();
-		s9.id = 110;
-		s9.firstname = "Ravi";
-		s9.lastname = "Gawande";
-		s9.englishobtained = 84;
-		s9.mathobtained = 79;
-		s9.scienceobtained = 93;
-		return s9;
+		s9.setId(110);
+		s9.setFirstname("Ravi");
+		s9.setLastname("Gawande");
+		s9.setMathobtained(79);
+		s9.setScienceobtained(93);
+		s9.setEnglishobtained(84);
+		
+	
+		Student[] studentArray = {s,s1,s2,s3,s4,s5,s6,s7,s8,s9,};
+		return studentArray;
+		
+		
+		
 	}
+	
 
-	public Student getRahulObject() {
-		Student s10 = new Student();
-		s10.id = 111;
-		s10.firstname = "Rahul";
-		s10.lastname = "Patil";
-		s10.englishobtained = 89;
-		s10.mathobtained = 92;
-		s10.scienceobtained = 79;
-		return s10;
-	}
 
 }
